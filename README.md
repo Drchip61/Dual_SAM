@@ -88,25 +88,25 @@ pip install -r requirements.txt
 ### Model Training and Testing
 
 **Training**
+```bash
+# Change the hyper parameter in the train_s.py 
 python train_s.py
+```
+
+**Testing**
+```bash
+# Change the hyper parameter in the test_y.py 
+python test_y.py
+```
 
 ### Analysis Tools
 
-VMamba includes tools for analyzing the effective receptive field, FLOPs, loss, and scaling behavior of the models. Use the following commands to perform analysis:
 
 ```bash
-# Analyze the effective receptive field
-CUDA_VISIBLE_DEVICES=0 python analyze/get_erf.py > analyze/show/erf/get_erf.log 2>&1
-
-# Analyze FLOPs
-CUDA_VISIBLE_DEVICES=0 python analyze/get_flops.py > analyze/show/flops/flops.log 2>&1
-
-# Analyze loss
-CUDA_VISIBLE_DEVICES=0 python analyze/get_loss.py
-
-# Further analysis on scaling behavior
-python analyze/scaleup_show.py
-
+# First threshold the prediction mask
+python bimap.py
+# Then evaluate the perdiction mask
+python test_score.py
 ```
 
 ## Citation
@@ -121,6 +121,3 @@ year={2024},
 url={https://openreview.net/forum?id=eqy4bQhOWV}
 }
 ```
-
-
-* We release [Fast-iTPN](https://github.com/sunsmarterjie/iTPN/tree/main/fast_itpn) recently, which reports the best performance on ImageNet-1K at Tiny/Small/Base level models as far as we know. (Tiny-24M-86.5%, Small-40M-87.8%, Base-85M-88.75%)
