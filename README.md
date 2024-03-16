@@ -16,7 +16,7 @@ C3P) paradigm to capture the inter-connectivity between pixels. It shows signifi
 * [**Dual-SAM**] is a novel learning framework for high performance Marine Animal Segmentation (MAS). The framework inherits the ability of SAM and adaptively incorporate prior knowledge of underwater scenarios.
 
 <p align="center">
-  <img src="assets/acc_flow_comp.png" alt="accuracy" width="80%">
+  <img src="github_show/framework.png" alt="accuracy" width="80%">
 </p>
 
 * **2D-Selective-Scan of VMamba**
