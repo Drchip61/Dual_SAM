@@ -31,6 +31,17 @@ C3P) paradigm to capture the inter-connectivity between pixels. It shows signifi
   <img src="github_show/MCP.png" alt="arch" width="60%">
 </p>
 
+* **Criss-Cross Connectivity Prediction**
+
+<p align="center">
+  <img src="github_show/c3p.png" alt="arch" width="60%">
+</p>
+
+* **Dilated Fusion Attention Module**
+
+<p align="center">
+  <img src="github_show/dfam.png" alt="arch" width="60%">
+</p>
 
 ## Main Results
 
