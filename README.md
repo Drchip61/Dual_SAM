@@ -60,61 +60,35 @@ We rely on five public datasets and five evaluation metrics to thoroughly valida
 
 ### Installation
 
-**step1:Clone the VMamba repository:**
+**step1:Clone the Dual_SAM repository:**
 
-To get started, first clone the VMamba repository and navigate to the project directory:
+To get started, first clone the Dual_SAM repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/MzeroMiko/VMamba.git
-cd VMamba
+git clone https://github.com/Drchip61/Dual_SAM.git
+cd Dual_SAM
 
 ```
 
 **step2:Environment Setup:**
 
-VMamba recommends setting up a conda environment and installing dependencies via pip. Use the following commands to set up your environment:
+Dual_SAM recommends setting up a conda environment and installing dependencies via pip. Use the following commands to set up your environment:
 #### Create and activate a new conda environment
 
 ```bash
-conda create -n vmamba
-conda activate vmamba
+conda create -n Dual_SAM
+conda activate Dual_SAM
 ```
 #### Install Dependencies.
 ```bash
 pip install -r requirements.txt
-# Install selective_scan and its dependencies
-cd selective_scan && pip install . && pytest
 ```
 
 
+### Model Training and Testing
 
-Optional Dependencies for Model Detection and Segmentation:
-```bash
-pip install mmengine==0.10.1 mmcv==2.1.0 opencv-python-headless ftfy
-pip install mmdet==3.3.0 mmsegmentation==1.2.2 mmpretrain==1.2.0
-```
-
-### Model Training and Inference
-
-**Classification:**
-
-To train VMamba models for classification on ImageNet, use the following commands for different configurations:
-
-```bash
-# For VMamba Tiny
-python -m torch.distributed.launch --nnodes=1 --node_rank=0 --nproc_per_node=8 --master_addr="127.0.0.1" --master_port=29501 main.py --cfg configs/vssm/vssm_tiny_224.yaml --batch-size 128 --data-path /dataset/ImageNet2012 --output /tmp
-
-# For VMamba Small
-python -m torch.distributed.launch --nnodes=1 --node_rank=0 --nproc_per_node=8 --master_addr="127.0.0.1" --master_port=29501 main.py --cfg configs/vssm/vssm_small_224.yaml --batch-size 128 --data-path /dataset/ImageNet2012 --output /tmp
-
-# For VMamba Base
-python -m torch.distributed.launch --nnodes=1 --node_rank=0 --nproc_per_node=8 --master_addr="127.0.0.1" --master_port=29501 main.py --cfg configs/vssm/vssm_base_224.yaml --batch-size 128 --data-path /dataset/ImageNet2012 --output /tmp
-
-```
-
-**Detection and Segmentation:**
-
-For detection and segmentation tasks, follow similar steps using the appropriate config files from the `configs/vssm` directory. Adjust the `--cfg`, `--data-path`, and `--output` parameters according to your dataset and desired output location.
+**Training**
+python train_s.py
 
 ### Analysis Tools
 
@@ -135,24 +109,18 @@ python analyze/scaleup_show.py
 
 ```
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=MzeroMiko/VMamba&type=Date)](https://star-history.com/#MzeroMiko/VMamba&Date)
-
 ## Citation
 
 ```
-@article{liu2024vmamba,
-  title={VMamba: Visual State Space Model},
-  author={Liu, Yue and Tian, Yunjie and Zhao, Yuzhong and Yu, Hongtian and Xie, Lingxi and Wang, Yaowei and Ye, Qixiang and Liu, Yunfan},
-  journal={arXiv preprint arXiv:2401.10166},
-  year={2024}
+@inproceedings{
+anonymous2024fantastic,
+title={Fantastic Animals and Where to Find Them: Segment Any Marine Animal with Dual {SAM}},
+author={Anonymous},
+booktitle={Conference on Computer Vision and Pattern Recognition 2024},
+year={2024},
+url={https://openreview.net/forum?id=eqy4bQhOWV}
 }
 ```
 
-## Acknowledgment
-
-This project is based on Mamba ([paper](https://arxiv.org/abs/2312.00752), [code](https://github.com/state-spaces/mamba)), Swin-Transformer ([paper](https://arxiv.org/pdf/2103.14030.pdf), [code](https://github.com/microsoft/Swin-Transformer)), ConvNeXt ([paper](https://arxiv.org/abs/2201.03545), [code](https://github.com/facebookresearch/ConvNeXt)), [OpenMMLab](https://github.com/open-mmlab),
-and the `analyze/get_erf.py` is adopted from [replknet](https://github.com/DingXiaoH/RepLKNet-pytorch/tree/main/erf), thanks for their excellent works.
 
 * We release [Fast-iTPN](https://github.com/sunsmarterjie/iTPN/tree/main/fast_itpn) recently, which reports the best performance on ImageNet-1K at Tiny/Small/Base level models as far as we know. (Tiny-24M-86.5%, Small-40M-87.8%, Base-85M-88.75%)
