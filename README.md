@@ -42,7 +42,7 @@ C3P) paradigm to capture the inter-connectivity between pixels. It shows signifi
 <p align="center">
   <img src="github_show/dfam.png" alt="arch" width="60%">
 </p>
-
+<div >
 ## Main Results
 
 We rely on five public datasets and five evaluation metrics to thoroughly validate our model’s performance.
