@@ -19,16 +19,16 @@ C3P) paradigm to capture the inter-connectivity between pixels. It shows signifi
   <img src="github_show/framework.png" alt="accuracy" width="80%">
 </p>
 
-* **2D-Selective-Scan of VMamba**
+* **Motivation of Our proposed Mehtod**
 
 <p align="center">
-  <img src="assets/ss2d.png" alt="arch" width="60%">
+  <img src="github_show/motivation.png" alt="arch" width="60%">
 </p>
 
-* **VMamba has global effective receptive field**
+* **Multi-level Coupled Prompt**
 
 <p align="center">
-  <img src="assets/erf_comp.png" alt="erf" width="50%">
+  <img src="github_show/MCP.png" alt="arch" width="60%">
 </p>
 
 
