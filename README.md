@@ -87,6 +87,8 @@ conda activate Dual_SAM
 pip install -r requirements.txt
 ```
 
+#### Download pretrained model.
+Please put the pretrained [SAM model](https://drive.google.com/file/d/1_oCdoEEu3mNhRfFxeWyRerOKt8OEUvcg/view?usp=share_link) in the Dual-SAM file.
 
 ### Model Training and Testing
 
