@@ -45,50 +45,14 @@ C3P) paradigm to capture the inter-connectivity between pixels. It shows signifi
 
 ## Main Results
 
-We will release all the pre-trained models/logs in few days!
+We rely on five public datasets and five evaluation metrics to thoroughly validate our model’s performance.
+<p align="center">
+  <img src="github_show/res1.png" alt="arch" width="60%">
+</p>
 
-* **Classification on ImageNet-1K**
-
-
-| name | pretrain | resolution |acc@1 | #params | FLOPs | checkpoints/logs |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| DeiT-S | ImageNet-1K | 224x224 | 79.8 | 22M | 4.6G | -- |
-| DeiT-B | ImageNet-1K | 224x224 | 81.8 | 86M | 17.5G | -- |
-| DeiT-B | ImageNet-1K | 384x384 | 83.1 | 86M | 55.4G | -- |
-| Swin-T | ImageNet-1K | 224x224 | 81.2 | 28M | 4.5G | -- |
-| Swin-S | ImageNet-1K | 224x224 | 83.2 | 50M | 8.7G | -- |
-| Swin-B | ImageNet-1K | 224x224 | 83.5 | 88M | 15.4G | -- |
-| VMamba-T | ImageNet-1K | 224x224 | 82.2 | 22M | 4.5G | [ckpt](https://drive.google.com/file/d/1ml7nZM-YPYbQurHiodf4dpXHw88dXFfP/view?usp=sharing)/[log](https://drive.google.com/file/d/1mVooWXl1Zj8ZALr1iYuoMLdG_yDbZpRx/view?usp=sharing) |
-| VMamba-S | ImageNet-1K | 224x224 | 83.5 | 44M | 9.1G | [ckpt](https://drive.google.com/file/d/1gUlRxeHxkn4JG2QR_DoAPbzSFYAoSxDy/view?usp=sharing)/[log](https://drive.google.com/file/d/12l81-VsPcCRjyIByWQzyO_EsovVj_00v/view?usp=sharing) |
-| VMamba-B | ImageNet-1K | 224x224 | 84.0 | 75M | 15.2G | waiting |
-
-* **Object Detection on COCO**
-  
-| Backbone | #params | FLOPs | Detector | box mAP | mask mAP | checkpoints/logs |
-| :---: | :---: | :---: | :---: | :---: | :---: |:---: |
-| Swin-T | 48M | 267G | MaskRCNN@1x | 42.7| 39.3 |-- |
-| VMamba-T | 42M | 262G | MaskRCNN@1x | 46.5| 42.1 |[ckpt](https://drive.google.com/file/d/1SIQFPpXkVBPB4mx1VO9P9nH4ebvTH0W5/view?usp=sharing)/[log](https://drive.google.com/file/d/15nd3AZuOkHpqlZhVUEXilnsVzd1qn8Kc/view?usp=sharing) |
-| Swin-S | 69M | 354G | MaskRCNN@1x | 44.8| 40.9 |-- |
-| VMamba-S | 64M | 357G | MaskRCNN@1x | 48.2| 43.0 |[ckpt](https://drive.google.com/file/d/1LzytVo2wTKgOxyBadstzacslwol8Dvhq/view?usp=sharing)/[log](https://drive.google.com/file/d/1TbYZhban4VqC-9kQ8-kuZOPSBX484sSj/view?usp=sharing) |
-| Swin-B | 107M | 496G | MaskRCNN@1x | 46.9| 42.3 |-- |
-| VMamba-B | 96M | 482G | MaskRCNN@1x | 48.5| 43.1 |[ckpt](https://huggingface.co/sunsmarterjieleaf/VMamba/tree/main)/[log](https://huggingface.co/sunsmarterjieleaf/VMamba/tree/main) |
-| Swin-T | 48M | 267G | MaskRCNN@3x | 46.0| 41.6 |-- |
-| VMamba-T | 42M | 262G | MaskRCNN@3x | 48.5| 43.2 |[ckpt](https://drive.google.com/file/d/1SmsgM2SR_GbKjq1EkcLcQXCEIlPhA-_r/view?usp=sharing)/[log](https://drive.google.com/file/d/1EVUKFsPQI3bqelX7-WlTKFdToXjwmcXU/view?usp=sharing) |
-| Swin-S | 69M | 354G | MaskRCNN@3x | 48.2| 43.2 |-- |
-| VMamba-S | 64M | 357G | MaskRCNN@3x | 49.7| 44.0 |[ckpt](https://huggingface.co/sunsmarterjieleaf/VMamba/tree/main)/[log](https://huggingface.co/sunsmarterjieleaf/VMamba/tree/main) |
-
-* **Semantic Segmentation on ADE20K**
-
-| Backbone | Input|  #params | FLOPs | Segmentor | mIoU | checkpoints/logs |
-| :---: | :---: | :---: | :---: | :---: | :---: |:---: |
-| Swin-T | 512x512 | 60M | 945G | UperNet@160k | 44.4| -- |
-| VMamba-T| 512x512 | 55M | 939G | UperNet@160k | 47.3| [ckpt](https://drive.google.com/file/d/1hLAGFBRJfaFSzyPlqsGbKXXN_gQJMLzn/view?usp=sharing)/[log](https://drive.google.com/file/d/17nh9_hdF9QQxyqj81U86HoGUnMxZQ4nN/view?usp=sharing) |
-| Swin-S | 512x512 | 81M | 1039G | UperNet@160k | 47.6| -- |
-| VMamba-S| 512x512 | 76M | 1037G | UperNet@160k | 49.5| [ckpt](https://drive.google.com/file/d/18GReI1A6LckwnPrnEFPXp9at7VB8GiJW/view?usp=sharing)/[log](https://drive.google.com/file/d/1m-Pd4_kPgF6Dt2E33sfIf_g9jVWxfPnG/view?usp=sharing) |
-| Swin-B | 512x512 | 121M | 1188G | UperNet@160k | 48.1| -- |
-| VMamba-B| 512x512 | 110M | 1167G | UperNet@160k | 50.0| [ckpt](https://huggingface.co/sunsmarterjieleaf/VMamba/tree/main)/[log](https://huggingface.co/sunsmarterjieleaf/VMamba/tree/main) |
-| Swin-S | 640x640 | 81M | 1614G | UperNet@160k | 47.9| -- |
-| VMamba-S| 640x640 | 76M | 1620G | UperNet@160k | 50.8| [ckpt](https://huggingface.co/sunsmarterjieleaf/VMamba/tree/main)/[log](https://huggingface.co/sunsmarterjieleaf/VMamba/tree/main) |
+<p align="center">
+  <img src="github_show/res2.png" alt="arch" width="60%">
+</p>
 
 
 
