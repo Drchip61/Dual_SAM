@@ -120,9 +120,8 @@ python test_score.py
 @inproceedings{
 anonymous2024fantastic,
 title={Fantastic Animals and Where to Find Them: Segment Any Marine Animal with Dual {SAM}},
-author={Anonymous},
+author={Pingping Zhang，Tianyu Yan， Yang Liu，Huchuan Lu},
 booktitle={Conference on Computer Vision and Pattern Recognition 2024},
-year={2024},
-url={https://openreview.net/forum?id=eqy4bQhOWV}
+year={2024}
 }
 ```
