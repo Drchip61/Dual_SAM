@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Dual-SAM </h1>
+<h1>Dual-SAM[Highlight]</h1>
 <h3>Fantastic Animals and Where to Find Them: Segment Any Marine Animal with Dual SAM</h3>
 
 [Pingping Zhang*](http://faculty.dlut.edu.cn/zhangpingping/en/index.htm)<sup>1</sup>,[Tianyu Yan](https://github.com/Drchip61)<sup>1</sup>,[Yang Liu](http://faculty.dlut.edu.cn/liuyang1/zh_CN/index.htm)<sup>1</sup>, [Huchuan Lu](http://faculty.dlut.edu.cn/Huchuan_Lu/zh_CN/index.htm)<sup>1</sup>
