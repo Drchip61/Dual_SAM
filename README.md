@@ -116,12 +116,10 @@ python test_score.py
 
 ### Visual Results
 We provide our [predicted results](链接：https://pan.baidu.com/s/18p7qFOC_J3GGz1QherHyMQ?pwd=qi0f 
-提取码：qi0f 
---来自百度网盘超级会员V3的分享) in the following attachment.
+提取码：qi0f) in the following attachment.
 
 We also provide USOD10K dataset [predicted results](链接：https://pan.baidu.com/s/1ZjV65Gh5_86y2nEdV6VBeA?pwd=ii60 
-提取码：ii60 
---来自百度网盘超级会员V3的分享) in the following attachment. 
+提取码：ii60) in the following attachment. 
 
 
 ### Concat
